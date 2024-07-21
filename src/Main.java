@@ -67,14 +67,9 @@ public class Main {
 
         List<Character> path = new ArrayList<>();
 
-        int columns = 0;
-        for(int i = 0; i< matrix[0].length; i++) {
-            columns++;
-        }
-        int rows = 0;
-        for(Character [] row : matrix){
-            rows++;
-        }
+        int columns = matrix[0].length;
+        int rows = matrix.length;
+
         int startI = 0;
         int startJ = 0;
         String direction = "Right";
@@ -135,5 +130,4 @@ public class Main {
         path.stream().filter(character -> Character.isLetter(character) && Character.isUpperCase(character)).forEach(System.out::print);
         // Didnt know what to do with the @ because its not mentioned in the text so i assumed it as a - (Also could have ignored it)
     }
-
 }
